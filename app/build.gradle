@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'kotlinx-serialization'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -23,6 +24,7 @@ android {
         viewBinding true
         dataBinding true
     }
+
 
     buildTypes {
         release {
@@ -59,8 +61,11 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1"
 
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.1'
+
     //RecyclerView
     implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
 
     testImplementation 'junit:junit:4.+'
