@@ -15,13 +15,10 @@ import java.net.URLConnection
 
 @Serializable
 data class SaveFile(
-    val id: Int,
     val fileName: String = "",
     val fileData: String = "",
     val fileEmail: String = ""
 )
-
-var autoInc = 1
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -32,10 +29,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.saveButton.setOnClickListener {
-            autoInc++
 
             val saveFile = SaveFile(
-                autoInc,
                 binding.fileName.text.toString(),
                 binding.fileData.text.toString(),
                 binding.fileEmail.text.toString()
